@@ -24,14 +24,14 @@ RUN apt-get install -y apt-transport-https \
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 # COPY default.tmpl /etc/varnish/default.tmpl
-COPY default2.tmpl /etc/varnish/default.tmpl
+COPY default_dev.tmpl /etc/varnish/default.tmpl
 
 ENV CACHE_SIZE=128m
 
 EXPOSE 80
 
+# STOPSIGNAL SIGINT
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-CMD ["vanish"]
-
-
+CMD ["vanishd"]
