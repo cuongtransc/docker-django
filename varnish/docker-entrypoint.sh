@@ -20,7 +20,7 @@ if [ "$1" = 'vanishd' ]; then
 
     # varnishd -F -f /etc/varnish/default.vcl -s malloc,$CACHE_SIZE -a 0.0.0.0:80
     varnishd -f /etc/varnish/default.vcl -s malloc,$CACHE_SIZE -a 0.0.0.0:80
-    while true; do :; done    
+    sleep infinity
 fi
 
 exec "$@"
