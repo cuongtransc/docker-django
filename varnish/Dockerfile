@@ -1,12 +1,12 @@
 # Author: Cuong Tran
 #
-# Build: docker build -t tranhuucuong91/vanish:0.1 .
-# Run: docker run -d -p 8080:8080 --name app-run tranhuucuong91/vanish:0.1
+# Build: docker build -t cuongtransc/vanish:0.1 .
+# Run: docker run -d -p 8080:8080 --name app-run cuongtransc/vanish:0.1
 #
 
 FROM debian:jessie
 
-MAINTAINER Cuong Tran "tranhuucuong91@gmail.com"
+MAINTAINER Cuong Tran "cuongtransc@gmail.com"
 
 # using apt-cacher-ng proxy for caching deb package
 RUN echo 'Acquire::http::Proxy "http://172.17.0.1:3142/";' > /etc/apt/apt.conf.d/01proxy
